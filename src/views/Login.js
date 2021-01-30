@@ -6,7 +6,7 @@ import apiClient from "../Services/ApiClient";
 export default class Login extends Component{
   
   state = {
-    email: '',
+    emailPayer: '',
   }
   handleChange = (e) => {
     this.setState({
@@ -15,14 +15,13 @@ export default class Login extends Component{
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { history } = this.props;
     const {
-      email
+      emailPayer
     } = this.state;
-
+    console.log('it works', emailPayer)
     apiClient
     .login({
-      email
+      emailPayer
     })
     .catch((err) =>{
       console.log(err)
@@ -40,7 +39,7 @@ export default class Login extends Component{
           <input
             type="text"
             name="email"
-            id="email"
+            id="emailPayer"
             placeholder="jhondoe@gmail.com"
             onChange={this.handleChange}
           />
