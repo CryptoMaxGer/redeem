@@ -65,7 +65,6 @@ export default class QuantityBox extends Component{
         <BigBox quantity={this.state.btcAmount} currency={'BTC'}/>
         <SmallBox quantity={this.state.quantityInFiat.toFixed(2)} currencySymbol={this.state.currencySymbol} currency={this.state.currency}/>
         <div className="box-interior marginBottom">
-        
             <p className="precio-final">
             Actual Price
               {" "}
